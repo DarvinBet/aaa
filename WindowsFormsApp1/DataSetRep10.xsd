@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetRep10" targetNamespace="http://tempuri.org/DataSetRep10.xsd" xmlns:mstns="http://tempuri.org/DataSetRep10.xsd" xmlns="http://tempuri.org/DataSetRep10.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="techConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="techConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.techConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="techConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT techtable.idtechtable, techtable.in_number, techtable.name_tech, techtable.date_buy, techtable.cost, techtable.status, techtable.date_write_off,  cabinet.number_cab, person.surname FROM techtable, cabinet, person WHERE techtable.idcabinet = cabinet.idcabinet AND techtable.idperson = person.idperson</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idtechtable" DataSetColumn="idtechtable" />
+              <Mapping SourceColumn="in_number" DataSetColumn="in_number" />
+              <Mapping SourceColumn="name_tech" DataSetColumn="name_tech" />
+              <Mapping SourceColumn="date_buy" DataSetColumn="date_buy" />
+              <Mapping SourceColumn="cost" DataSetColumn="cost" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="date_write_off" DataSetColumn="date_write_off" />
+              <Mapping SourceColumn="number_cab" DataSetColumn="number_cab" />
+              <Mapping SourceColumn="surname" DataSetColumn="surname" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetRep10" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetRep10" msprop:Generator_UserDSName="DataSetRep10">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idtechtable" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidtechtable" msprop:Generator_ColumnPropNameInRow="idtechtable" msprop:Generator_ColumnPropNameInTable="idtechtableColumn" msprop:Generator_UserColumnName="idtechtable" type="xs:int" />
+              <xs:element name="in_number" msprop:Generator_ColumnVarNameInTable="columnin_number" msprop:Generator_ColumnPropNameInRow="in_number" msprop:Generator_ColumnPropNameInTable="in_numberColumn" msprop:Generator_UserColumnName="in_number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_tech" msprop:Generator_ColumnVarNameInTable="columnname_tech" msprop:Generator_ColumnPropNameInRow="name_tech" msprop:Generator_ColumnPropNameInTable="name_techColumn" msprop:Generator_UserColumnName="name_tech" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_buy" msprop:Generator_ColumnVarNameInTable="columndate_buy" msprop:Generator_ColumnPropNameInRow="date_buy" msprop:Generator_ColumnPropNameInTable="date_buyColumn" msprop:Generator_UserColumnName="date_buy" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cost" msprop:Generator_ColumnVarNameInTable="columncost" msprop:Generator_ColumnPropNameInRow="cost" msprop:Generator_ColumnPropNameInTable="costColumn" msprop:Generator_UserColumnName="cost" type="xs:float" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_write_off" msprop:Generator_ColumnVarNameInTable="columndate_write_off" msprop:Generator_ColumnPropNameInRow="date_write_off" msprop:Generator_ColumnPropNameInTable="date_write_offColumn" msprop:Generator_UserColumnName="date_write_off" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="number_cab" msprop:Generator_ColumnVarNameInTable="columnnumber_cab" msprop:Generator_ColumnPropNameInRow="number_cab" msprop:Generator_ColumnPropNameInTable="number_cabColumn" msprop:Generator_UserColumnName="number_cab" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="surname" msprop:Generator_ColumnVarNameInTable="columnsurname" msprop:Generator_ColumnPropNameInRow="surname" msprop:Generator_ColumnPropNameInTable="surnameColumn" msprop:Generator_UserColumnName="surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:idtechtable" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
